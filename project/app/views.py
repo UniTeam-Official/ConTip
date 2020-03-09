@@ -1,6 +1,7 @@
 from rest_framework import generics, mixins
 from .serializers import *
 from .permissions import *
+from .pagination import *
 from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
@@ -56,6 +57,7 @@ class MovieDetailView(generics.RetrieveUpdateDestroyAPIView):
 class MovieListView(generics.ListAPIView):
     serializer_class = MovieSerializer
     permission_classes = (IsAuthenticated, )
+    pagination_class = StandardResultsSetPagination
 
     def get_queryset(self):
         return Movie.objects.all()
