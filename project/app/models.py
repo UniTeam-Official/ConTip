@@ -7,10 +7,6 @@ class Genre(models.Model):
     name = models.CharField(max_length=50)
 
 
-class User(AbstractUser):
-    genre_preferences = models.ManyToManyField(Genre, null=True)
-
-
 class Movie(models.Model):
     title = models.CharField(max_length=100)
     genre = models.ManyToManyField(
@@ -20,7 +16,20 @@ class Movie(models.Model):
     )
     imdb = models.IntegerField(default=0)
     tmdb = models.IntegerField(default=0)
-    dataset_id = models.IntegerField()
+
+
+class User(AbstractUser):
+    pass
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(
+        User,
+        on_delete = models.CASCADE,
+        related_name="user_profile"
+    )
+    genre_preference = models.ManyToManyField(Genre, null=True)
+    watched_list = models.ManyToManyField(Movie, null=True)
 
 
 class Rating(models.Model):
@@ -40,5 +49,3 @@ class Rating(models.Model):
 
     class Meta:
         unique_together = ['film', 'user']
-
-
