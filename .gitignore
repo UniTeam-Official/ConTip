@@ -139,3 +139,8 @@ project/frontend/packages/react-devtools-extensions/firefox/*.pem
 project/frontend/packages/react-devtools-extensions/shared/build
 project/frontend/packages/react-devtools-inline/dist
 project/frontend/packages/react-devtools-shell/dist
+
+project/genres.json
+project/movies.json
+project/users.json
+project/ratings.json

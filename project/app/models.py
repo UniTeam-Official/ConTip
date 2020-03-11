@@ -11,25 +11,23 @@ class Movie(models.Model):
     title = models.CharField(max_length=100)
     genre = models.ManyToManyField(
         Genre,
-        related_name="films",
-        null=True
+        related_name="films"
     )
     imdb = models.IntegerField(default=0)
     tmdb = models.IntegerField(default=0)
 
 
 class User(AbstractUser):
-    pass
+    genre_preference = models.ManyToManyField(Genre)
+    watched_list = models.ManyToManyField(Movie)
 
 
-class UserProfile(models.Model):
-    user = models.OneToOneField(
-        User,
-        on_delete = models.CASCADE,
-        related_name="user_profile"
-    )
-    genre_preference = models.ManyToManyField(Genre, null=True)
-    watched_list = models.ManyToManyField(Movie, null=True)
+# class UserProfile(models.Model):
+#     user = models.OneToOneField(
+#         User,
+#         on_delete = models.CASCADE,
+#         related_name="user_profile"
+#     )
 
 
 class Rating(models.Model):
