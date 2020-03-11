@@ -25,7 +25,4 @@ class Migration(migrations.Migration):
             model_name='movie',
             name='dataset_id',
         ),
-        migrations.DeleteModel(
-            name='User',
-        ),
     ]
