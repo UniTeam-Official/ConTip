@@ -8,7 +8,7 @@ class Genre(models.Model):
 
 
 class Movie(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=200)
     genre = models.ManyToManyField(
         Genre,
         related_name="films"
