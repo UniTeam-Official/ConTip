@@ -2,9 +2,15 @@ from rest_framework import serializers
 from .models import *
 
 
-class UserPreferencesSerializer(serializers.ModelSerializer):
+class WatchedListSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
+        model = UserProfile
+        fields = ("watched_list", )
+
+
+class UserGenrePreferencesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserProfile
         fields = ("genre_preferences", )
 
 

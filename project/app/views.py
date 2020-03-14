@@ -8,7 +8,21 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 class UserPreferencesSetView(generics.RetrieveAPIView,
                              mixins.UpdateModelMixin):
-    serializer_class = UserPreferencesSerializer
+    serializer_class = UserGenrePreferencesSerializer
+    permission_classes = (UserIsOwnerOrReadOnly, )
+
+    def get_object(self):
+        username = self.request.user
+        obj = get_object_or_404(User, username=username)
+        return obj
+
+    def put(self, request, *args, **kwargs):
+        return self.update(request, *args, **kwargs)
+
+
+class WatchedListView(generics.RetrieveAPIView,
+                             mixins.UpdateModelMixin):
+    serializer_class = UserGenrePreferencesSerializer
     permission_classes = (UserIsOwnerOrReadOnly, )
 
     def get_object(self):
