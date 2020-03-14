@@ -3,15 +3,19 @@ from .models import *
 
 
 class WatchedListSerializer(serializers.ModelSerializer):
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+
     class Meta:
         model = UserProfile
-        fields = ("watched_list", )
+        fields = ("user", "watched_list", )
 
 
 class UserGenrePreferencesSerializer(serializers.ModelSerializer):
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+
     class Meta:
         model = UserProfile
-        fields = ("genre_preferences", )
+        fields = ("user", "genre_preference", )
 
 
 class GenreSerializer(serializers.ModelSerializer):

@@ -4,7 +4,11 @@ from .views import *
 urlpatterns = [
     path(
         'preferences/set/',
-        UserPreferencesSetView.as_view()
+        UserPreferencesView.as_view()
+    ),
+    path(
+        'watched/set/',
+        WatchedListView.as_view()
     ),
     path(
         'genre/create/',

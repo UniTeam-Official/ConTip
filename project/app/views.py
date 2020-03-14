@@ -6,14 +6,13 @@ from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 
-class UserPreferencesSetView(generics.RetrieveAPIView,
+class UserPreferencesView(generics.RetrieveAPIView,
                              mixins.UpdateModelMixin):
     serializer_class = UserGenrePreferencesSerializer
-    permission_classes = (UserIsOwnerOrReadOnly, )
+    permission_classes = (IsOwnerOrReadOnly, )
 
     def get_object(self):
-        username = self.request.user
-        obj = get_object_or_404(User, username=username)
+        obj = get_object_or_404(UserProfile, user=self.request.user.id)
         return obj
 
     def put(self, request, *args, **kwargs):
@@ -22,12 +21,11 @@ class UserPreferencesSetView(generics.RetrieveAPIView,
 
 class WatchedListView(generics.RetrieveAPIView,
                              mixins.UpdateModelMixin):
-    serializer_class = UserGenrePreferencesSerializer
-    permission_classes = (UserIsOwnerOrReadOnly, )
+    serializer_class = WatchedListSerializer
+    permission_classes = (IsOwnerOrReadOnly, )
 
     def get_object(self):
-        username = self.request.user
-        obj = get_object_or_404(User, username=username)
+        obj = get_object_or_404(UserProfile, user=self.request.user.id)
         return obj
 
     def put(self, request, *args, **kwargs):
