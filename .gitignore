@@ -128,7 +128,6 @@ project/frontend/*.iml
 project/frontend/.vscode
 project/frontend/*.swp
 project/frontend/*.swo
-project/frontend/
 project/frontend/packages/react-devtools-core/dist
 project/frontend/packages/react-devtools-extensions/chrome/build
 project/frontend/packages/react-devtools-extensions/chrome/*.crx
