@@ -2215,7 +2215,7 @@ body.is-touch .tiles article .content {
 /* Header */
 #header {
   padding: 20px;
-  background: #FFFFFF;
+  background: #F6F6F6;
   position: fixed;
   z-index: 10000;
   width: 100%;
@@ -2476,7 +2476,7 @@ body.is-menu-visible #menu .close {
 /* Footer */
 #footer {
   padding: 5em 0 6em 0;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 #footer > .inner {
   display: -moz-flex;
@@ -2502,8 +2502,9 @@ body.is-menu-visible #menu .close {
   padding: 0;
   margin-top: 5em;
   list-style: none;
+  font-weight: bold;
   font-size: 0.8em;
-  color: rgba(88, 88, 88, 0.5);
+  color: #585858;
 }
 #footer > .inner .copyright a {
   color: inherit;
