@@ -5,15 +5,26 @@
 ///
 
 /* Header */
-#meny {
+.meny {
   display: block;
 }
 
 @media screen and (max-width: 990px) {
-  #meny {
+  .meny {
 		position: absolute;
 		left: +10000%;
     display: none;
+  }
+  .meny-responsive {position: relative;}
+  .meny-responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .meny-responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
 
