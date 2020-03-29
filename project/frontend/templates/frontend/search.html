@@ -1,0 +1,366 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<nav id="meny" class="meny">
+							<ul>
+								<li><a href="search.html">Search</a></li>
+								<li><a href="index.html">Recommendations</a></li>
+								<li><a href="profile.html">Profile</a></li>
+								<li><a href="watched.html">Seen Movies</a></li>
+								<li><a href="login.html">Log Out</a></li>
+							</ul>
+						</nav>
+						<a href="javascript:void(0);" class="icon" onclick="navBarFunc()">
+							<i class="nav-button fa fa-bars"></i>
+						</a>
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">ConTip</span>
+								</a>
+						</div>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>Kuda edem?</h1>
+								<p>...we sat down and watched thousands of DURKAS, just to find six special ones that you should definitely check out this week </p>
+							</header>
+							<div class="sections-double">
+                                <section class="filters-section">
+                                    <div class="accordion">
+                                        <div class="accordion-btn .active opened active">
+                                            <header class="accordion-header">
+                                                <div>
+                                                    <div class="filters-title">
+                                                        Genres
+                                                    </div>
+                                                </div>
+                                                <span class="icon">
+                                                    <div class="circle-plus closed">
+                                                        <div class="circle">
+                                                          <div class="horizontal"></div>
+                                                          <div class="vertical"></div>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </header>
+                                        </div>
+                                        <div class="panel" style="max-height: 181px;">
+                                            <div class="accordion-content">
+                                                <div class="treeview">
+                                                    <div class="checkbox-section">
+                                                        <div class="col-6 col-12-small">
+                                                            <ul class="list">
+                                                                <li class="list-item">
+                                                                    <input type="checkbox" id="genre1" name="genre1">
+                                                                    <label for="genre1">First Genre</label>
+                                                                </li>
+                                                                <li class="list-item">
+                                                                    <input type="checkbox" id="genre2" name="genre2">
+                                                                    <label for="genre2">Second Genre</label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.accordion -->
+                                    <div class="accordion">
+                                        <div class="accordion-btn">
+                                            <header class="accordion-header">
+                                                <div>
+                                                    <div class="filters-title">
+                                                        Sort by
+                                                    </div>
+                                                </div>
+                                                <span class="icon">
+                                                    <div class="circle-plus closed">
+                                                        <div class="circle">
+                                                          <div class="horizontal"></div>
+                                                          <div class="vertical"></div>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </header>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="accordion-content">
+                                                <div class="treeview">
+                                                    <div class="checkbox-section">
+                                                        <div class="col-6 col-12-small">
+                                                            <ul class="list">
+                                                                <li class="list-item">
+                                                                    <input type="checkbox" id="sort-ascending" name="sort-ascending">
+                                                                    <label for="sort-ascending">Ascending</label>
+                                                                </li>
+                                                                <li class="list-item">
+                                                                    <input type="checkbox" id="sort-descending" name="sort-descending">
+                                                                    <label for="sort-descending">Descending</label>
+                                                                </li>
+                                                                <li class="list-item">
+                                                                    <input type="checkbox" id="sort-rating" name="sort-rating">
+                                                                    <label for="sort-rating">Rating</label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.accordion -->
+                                </section>
+                                <section class="tiles-section">
+                                    <div class="controls">
+                                        <form>
+                                            <div class="search">
+                                                <i class="fa fa-filter openbtn" onclick="openSidebar()" style="font-size:16px"></i>
+                                                <div id="filterSidebar" class="filter-sidebar">
+                                                    <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+                                                    <div class="accordion">
+                                                        <div class="accordion-btn .active opened active">
+                                                            <header class="accordion-header">
+                                                                <div>
+                                                                    <div class="filters-title">
+                                                                        Genres
+                                                                    </div>
+                                                                </div>
+                                                                <span class="icon">
+                                                                    <div class="circle-plus closed">
+                                                                        <div class="circle">
+                                                                          <div class="horizontal"></div>
+                                                                          <div class="vertical"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </span>
+                                                            </header>
+                                                        </div>
+                                                        <div class="panel" style="max-height: 181px;">
+                                                            <div class="accordion-content">
+                                                                <div class="treeview">
+                                                                    <div class="checkbox-section">
+                                                                        <div class="col-6 col-12-small">
+                                                                            <ul class="list">
+                                                                                <li class="list-item">
+                                                                                    <input type="checkbox" id="genre1-side" name="genre1-side">
+                                                                                    <label for="genre1-side">First Genre</label>
+                                                                                </li>
+                                                                                <li class="list-item">
+                                                                                    <input type="checkbox" id="genre2-side" name="genre2-side">
+                                                                                    <label for="genre2-side">Second Genre</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.accordion -->
+                                                    <div class="accordion">
+                                                        <div class="accordion-btn">
+                                                            <header class="accordion-header">
+                                                                <div>
+                                                                    <div class="filters-title">
+                                                                        Sort by
+                                                                    </div>
+                                                                </div>
+                                                                <span class="icon">
+                                                                    <div class="circle-plus closed">
+                                                                        <div class="circle">
+                                                                          <div class="horizontal"></div>
+                                                                          <div class="vertical"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </span>
+                                                            </header>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="accordion-content">
+                                                                <div class="treeview">
+                                                                    <div class="checkbox-section">
+                                                                        <div class="col-6 col-12-small">
+                                                                            <ul class="list">
+                                                                                <li class="list-item">
+                                                                                    <input type="checkbox" id="sort-ascending-side" name="sort-ascending-side">
+                                                                                    <label for="sort-ascending-side">Ascending</label>
+                                                                                </li>
+                                                                                <li class="list-item">
+                                                                                    <input type="checkbox" id="sort-descending-side" name="sort-descending-side">
+                                                                                    <label for="sort-descending-side">Descending</label>
+                                                                                </li>
+                                                                                <li class="list-item">
+                                                                                    <input type="checkbox" id="sort-rating-side" name="sort-rating-side">
+                                                                                    <label for="sort-rating-side">Rating</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.accordion -->
+                                                </div><!-- /.filter-sidebar -->
+                                                <button class="search-btn" type="button">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                                <span class="search-searched-count">
+                                                    142 results
+                                                </span>
+                                                <input class="search-input">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <section class="tiles">
+                                        <article class="style1">
+                                            <span class="image">
+                                                <img src="images/pic01.jpg" alt="" />
+                                            </span>
+                                            <a href="film_page.html">
+                                                <h2>*Durka Branch*</h2>
+                                                <div class="content">
+                                                    <p>*Genre*<br>
+                                                        *Year*</p>
+                                                </div>
+                                            </a>
+                                        </article>
+                                        <article class="style2">
+                                            <span class="image">
+                                                <img src="images/pic02.jpg" alt="" />
+                                            </span>
+                                            <a href="film_page.html">
+                                                <h2>*Durka Branch*</h2>
+                                                <div class="content">
+                                                    <p>*Genre*<br>
+                                                        *Year*</p>
+                                                </div>
+                                            </a>
+                                        </article>
+                                        <article class="style3">
+                                            <span class="image">
+                                                <img src="images/pic03.jpg" alt="" />
+                                            </span>
+                                            <a href="film_page.html">
+                                                <h2>*Durka Branch*</h2>
+                                                <div class="content">
+                                                    <p>*Genre*<br>
+                                                        *Year*</p>
+                                                </div>
+                                            </a>
+                                        </article>
+                                        <article class="style4">
+                                            <span class="image">
+                                                <img src="images/pic04.jpg" alt="" />
+                                            </span>
+                                            <a href="film_page.html">
+                                                <h2>*Durka Branch*</h2>
+                                                <div class="content">
+                                                    <p>*Genre*<br>
+                                                        *Year*</p>
+                                                </div>
+                                            </a>
+                                        </article>
+                                        <article class="style5">
+                                            <span class="image">
+                                                <img src="images/pic05.jpg" alt="" />
+                                            </span>
+                                            <a href="film_page.html">
+                                                <h2>*Durka Branch*</h2>
+                                                <div class="content">
+                                                    <p>*Genre*<br>
+                                                        *Year*</p>
+                                                </div>
+                                            </a>
+                                        </article>
+                                        <article class="style6">
+                                            <span class="image">
+                                                <img src="images/pic06.jpg" alt="" />
+                                            </span>
+                                            <a href="film_page.html">
+                                                <h2>*Durka Branch*</h2>
+                                                <div class="content">
+                                                    <p>*Genre*<br>
+                                                        *Year*</p>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </section>
+                                </section>
+                            </div>
+						</div>
+                    </div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>You Think We Don't Know That One Unique, Artistic, Extraordinary Movie?<br>
+									Recommend It To Us!</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Movie We Have To Check Out!" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="How Much Will We Like It/10?" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Imdb Link"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; ConTip, a UniTeam Product. All rights reserved</li><li>Original Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script src="assets/js/navbar.js"></script>
+            <script src="assets/js/accordion.js"></script>
+            <script src="assets/js/sidebar.js"></script>
+
+	</body>
+</html>
