@@ -135,101 +135,103 @@
                                 <section class="tiles-section">
                                     <div class="controls">
                                         <form>
-                                            <div class="search">
-                                                <i class="fa fa-filter openbtn" onclick="openSidebar()" style="font-size:16px"></i>
-                                                <div id="filterSidebar" class="filter-sidebar">
-                                                    <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
-                                                    <div class="accordion">
-                                                        <div class="accordion-btn .active opened active">
-                                                            <header class="accordion-header">
-                                                                <div>
-                                                                    <div class="filters-title">
-                                                                        Genres
-                                                                    </div>
-                                                                </div>
-                                                                <span class="icon">
-                                                                    <div class="circle-plus closed">
-                                                                        <div class="circle">
-                                                                          <div class="horizontal"></div>
-                                                                          <div class="vertical"></div>
+                                            <div class="search-container">
+                                                <div class="search">
+                                                    <i class="fa fa-filter openbtn" onclick="openSidebar()" style="font-size:16px"></i>
+                                                    <div id="filterSidebar" class="filter-sidebar">
+                                                        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+                                                        <div class="accordion">
+                                                            <div class="accordion-btn .active opened active">
+                                                                <header class="accordion-header">
+                                                                    <div>
+                                                                        <div class="filters-title">
+                                                                            Genres
                                                                         </div>
                                                                     </div>
-                                                                </span>
-                                                            </header>
-                                                        </div>
-                                                        <div class="panel" style="max-height: 181px;">
-                                                            <div class="accordion-content">
-                                                                <div class="treeview">
-                                                                    <div class="checkbox-section">
-                                                                        <div class="col-6 col-12-small">
-                                                                            <ul class="list">
-                                                                                <li class="list-item">
-                                                                                    <input type="checkbox" id="genre1-side" name="genre1-side">
-                                                                                    <label for="genre1-side">First Genre</label>
-                                                                                </li>
-                                                                                <li class="list-item">
-                                                                                    <input type="checkbox" id="genre2-side" name="genre2-side">
-                                                                                    <label for="genre2-side">Second Genre</label>
-                                                                                </li>
-                                                                            </ul>
+                                                                    <span class="icon">
+                                                                        <div class="circle-plus closed">
+                                                                            <div class="circle">
+                                                                            <div class="horizontal"></div>
+                                                                            <div class="vertical"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </span>
+                                                                </header>
+                                                            </div>
+                                                            <div class="panel" style="max-height: 181px;">
+                                                                <div class="accordion-content">
+                                                                    <div class="treeview">
+                                                                        <div class="checkbox-section">
+                                                                            <div class="col-6 col-12-small">
+                                                                                <ul class="list">
+                                                                                    <li class="list-item">
+                                                                                        <input type="checkbox" id="genre1-side" name="genre1-side">
+                                                                                        <label for="genre1-side">First Genre</label>
+                                                                                    </li>
+                                                                                    <li class="list-item">
+                                                                                        <input type="checkbox" id="genre2-side" name="genre2-side">
+                                                                                        <label for="genre2-side">Second Genre</label>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div><!-- /.accordion -->
-                                                    <div class="accordion">
-                                                        <div class="accordion-btn">
-                                                            <header class="accordion-header">
-                                                                <div>
-                                                                    <div class="filters-title">
-                                                                        Sort by
-                                                                    </div>
-                                                                </div>
-                                                                <span class="icon">
-                                                                    <div class="circle-plus closed">
-                                                                        <div class="circle">
-                                                                          <div class="horizontal"></div>
-                                                                          <div class="vertical"></div>
+                                                        </div><!-- /.accordion -->
+                                                        <div class="accordion">
+                                                            <div class="accordion-btn">
+                                                                <header class="accordion-header">
+                                                                    <div>
+                                                                        <div class="filters-title">
+                                                                            Sort by
                                                                         </div>
                                                                     </div>
-                                                                </span>
-                                                            </header>
-                                                        </div>
-                                                        <div class="panel">
-                                                            <div class="accordion-content">
-                                                                <div class="treeview">
-                                                                    <div class="checkbox-section">
-                                                                        <div class="col-6 col-12-small">
-                                                                            <ul class="list">
-                                                                                <li class="list-item">
-                                                                                    <input type="checkbox" id="sort-ascending-side" name="sort-ascending-side">
-                                                                                    <label for="sort-ascending-side">Ascending</label>
-                                                                                </li>
-                                                                                <li class="list-item">
-                                                                                    <input type="checkbox" id="sort-descending-side" name="sort-descending-side">
-                                                                                    <label for="sort-descending-side">Descending</label>
-                                                                                </li>
-                                                                                <li class="list-item">
-                                                                                    <input type="checkbox" id="sort-rating-side" name="sort-rating-side">
-                                                                                    <label for="sort-rating-side">Rating</label>
-                                                                                </li>
-                                                                            </ul>
+                                                                    <span class="icon">
+                                                                        <div class="circle-plus closed">
+                                                                            <div class="circle">
+                                                                            <div class="horizontal"></div>
+                                                                            <div class="vertical"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </span>
+                                                                </header>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="accordion-content">
+                                                                    <div class="treeview">
+                                                                        <div class="checkbox-section">
+                                                                            <div class="col-6 col-12-small">
+                                                                                <ul class="list">
+                                                                                    <li class="list-item">
+                                                                                        <input type="checkbox" id="sort-ascending-side" name="sort-ascending-side">
+                                                                                        <label for="sort-ascending-side">Ascending</label>
+                                                                                    </li>
+                                                                                    <li class="list-item">
+                                                                                        <input type="checkbox" id="sort-descending-side" name="sort-descending-side">
+                                                                                        <label for="sort-descending-side">Descending</label>
+                                                                                    </li>
+                                                                                    <li class="list-item">
+                                                                                        <input type="checkbox" id="sort-rating-side" name="sort-rating-side">
+                                                                                        <label for="sort-rating-side">Rating</label>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div><!-- /.accordion -->
-                                                </div><!-- /.filter-sidebar -->
-                                                <button class="search-btn" type="button">
-                                                    <i class="fa fa-search"></i>
-                                                </button>
-                                                <span class="search-searched-count">
-                                                    142 results
-                                                </span>
-                                                <input class="search-input">
-                                            </div>
+                                                        </div><!-- /.accordion -->
+                                                    </div><!-- /.filter-sidebar -->
+                                                    <button class="search-btn" type="button">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+                                                    <span class="search-searched-count">
+                                                        142 results
+                                                    </span>
+                                                    <input class="search-input">
+                                                </div><!-- ./search -->
+                                            </div><!-- /.search-container -->
                                         </form>
                                     </div>
                                     <section class="tiles">
