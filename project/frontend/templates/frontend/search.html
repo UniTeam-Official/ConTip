@@ -20,12 +20,12 @@
 				<!-- Header -->
 					<header id="header">
 						<nav id="meny" class="meny">
-							<ul>
-								<li><a href="search.html">Search</a></li>
-								<li><a href="index.html">Recommendations</a></li>
-								<li><a href="profile.html">Profile</a></li>
-								<li><a href="watched.html">Seen Movies</a></li>
-								<li><a href="login.html">Log Out</a></li>
+							<ul id="desktop_menu">
+								<li id="desktop_navbarbutton"><a href="search.html">Search</a></li>
+								<li id="desktop_navbarbutton"><a href="index.html">Recommendations</a></li>
+								<li id="desktop_navbarbutton"><a href="profile.html">Profile</a></li>
+								<li id="desktop_navbarbutton"><a href="watched.html">Seen Movies</a></li>
+								<li id="desktop_navbarbutton"><a href="login.html">Log Out</a></li>
 							</ul>
 						</nav>
 						<a href="javascript:void(0);" class="icon" onclick="navBarFunc()">
@@ -48,8 +48,8 @@
 								<p>...we sat down and watched thousands of DURKAS, just to find six special ones that you should definitely check out this week </p>
 							</header>
 							<div class="sections-double">
-                                <section class="filters-section">
-                                    <div class="accordion">
+                                <section id="filters" class="filters-section">
+                                    <div id="filter-box" class="accordion">
                                         <div class="accordion-btn .active opened active">
                                             <header class="accordion-header">
                                                 <div>
@@ -73,11 +73,11 @@
                                                     <div class="checkbox-section">
                                                         <div class="col-6 col-12-small">
                                                             <ul class="list">
-                                                                <li class="list-item">
+                                                                <li id="check-box"class="list-item">
                                                                     <input type="checkbox" id="genre1" name="genre1">
                                                                     <label for="genre1">First Genre</label>
                                                                 </li>
-                                                                <li class="list-item">
+                                                                <li id="check-box" class="list-item">
                                                                     <input type="checkbox" id="genre2" name="genre2">
                                                                     <label for="genre2">Second Genre</label>
                                                                 </li>
@@ -88,7 +88,7 @@
                                             </div>
                                         </div>
                                     </div><!-- /.accordion -->
-                                    <div class="accordion">
+                                    <div id="filter-box" class="accordion">
                                         <div class="accordion-btn">
                                             <header class="accordion-header">
                                                 <div>
@@ -112,15 +112,15 @@
                                                     <div class="checkbox-section">
                                                         <div class="col-6 col-12-small">
                                                             <ul class="list">
-                                                                <li class="list-item">
+                                                                <li id="check-box" class="list-item">
                                                                     <input type="checkbox" id="sort-ascending" name="sort-ascending">
                                                                     <label for="sort-ascending">Ascending</label>
                                                                 </li>
-                                                                <li class="list-item">
+                                                                <li id="check-box" class="list-item">
                                                                     <input type="checkbox" id="sort-descending" name="sort-descending">
                                                                     <label for="sort-descending">Descending</label>
                                                                 </li>
-                                                                <li class="list-item">
+                                                                <li id="check-box" class="list-item">
                                                                     <input type="checkbox" id="sort-rating" name="sort-rating">
                                                                     <label for="sort-rating">Rating</label>
                                                                 </li>
@@ -135,7 +135,7 @@
                                 <section class="tiles-section">
                                     <div class="controls">
                                         <form>
-                                            <div class="search-container">
+                                            <div id="search_bar" class="search-container">
                                                 <div class="search">
                                                     <i class="fa fa-filter openbtn" onclick="openSidebar()" style="font-size:16px"></i>
                                                     <div id="filterSidebar" class="filter-sidebar">
@@ -235,7 +235,7 @@
                                         </form>
                                     </div>
                                     <section class="tiles">
-                                        <article class="style1">
+                                        <article id="film square" class="style1">
                                             <span class="image">
                                                 <img src="images/pic01.jpg" alt="" />
                                             </span>
@@ -247,7 +247,7 @@
                                                 </div>
                                             </a>
                                         </article>
-                                        <article class="style2">
+                                        <article id="film square" class="style2">
                                             <span class="image">
                                                 <img src="images/pic02.jpg" alt="" />
                                             </span>
@@ -259,7 +259,7 @@
                                                 </div>
                                             </a>
                                         </article>
-                                        <article class="style3">
+                                        <article id="film square" class="style3">
                                             <span class="image">
                                                 <img src="images/pic03.jpg" alt="" />
                                             </span>
@@ -271,7 +271,7 @@
                                                 </div>
                                             </a>
                                         </article>
-                                        <article class="style4">
+                                        <article id="film square" class="style4">
                                             <span class="image">
                                                 <img src="images/pic04.jpg" alt="" />
                                             </span>
@@ -283,7 +283,7 @@
                                                 </div>
                                             </a>
                                         </article>
-                                        <article class="style5">
+                                        <article id="film square" class="style5">
                                             <span class="image">
                                                 <img src="images/pic05.jpg" alt="" />
                                             </span>
@@ -295,7 +295,7 @@
                                                 </div>
                                             </a>
                                         </article>
-                                        <article class="style6">
+                                        <article id="film square" class="style6">
                                             <span class="image">
                                                 <img src="images/pic06.jpg" alt="" />
                                             </span>
@@ -322,28 +322,28 @@
 								<form method="post" action="#">
 									<div class="fields">
 										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Movie We Have To Check Out!" />
+											<input type="text" name="name" id="name_input_field" placeholder="Movie We Have To Check Out!" />
 										</div>
 										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="How Much Will We Like It/10?" />
+											<input type="email" name="email" id="email_input_field" placeholder="How Much Will We Like It/10?" />
 										</div>
 										<div class="field">
-											<textarea name="message" id="message" placeholder="Imdb Link"></textarea>
+											<textarea name="message" id="message_input_field" placeholder="Imdb Link"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
+										<li><input type="submit" id="send_button" value="Send" class="primary" /></li>
 									</ul>
 								</form>
 							</section>
 							<section>
 								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								<ul id="media_icons" class="icons">
+									<li id="media_icon"><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li id="media_icon"><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li id="media_icon"><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li id="media_icon"><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li id="media_icon"><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">
