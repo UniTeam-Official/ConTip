@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Main extends Component {
+class RecommendationHeader extends Component {
   render() {
     return (
       <header>
@@ -11,4 +11,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default RecommendationHeader;

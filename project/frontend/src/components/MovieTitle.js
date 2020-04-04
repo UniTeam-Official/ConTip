@@ -2,14 +2,12 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 
-class Header extends Component {
+class MovieTitle extends Component {
   render() {
     return (
-      <div>
-        zdarova pacani
-      </div>
+      <h2>*Movie Title*</h2>
     );
   }
 }
 
-export default Header;
+export default MovieTitle;

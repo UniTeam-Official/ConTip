@@ -1,15 +1,14 @@
-
 import React, { Component } from "react";
 import { render } from "react-dom";
 
-class Header extends Component {
+class MovieImageButton extends Component {
   render() {
     return (
-      <div>
-        zdarova pacani
-      </div>
+      <span class="image">
+        <img src="images/pic01.jpg" alt="" />
+      </span>
     );
   }
 }
 
-export default Header;
+export default MovieImageButton;

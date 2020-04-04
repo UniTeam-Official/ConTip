@@ -1,15 +1,11 @@
-
 import React, { Component } from "react";
-import { render } from "react-dom";
 
-class Header extends Component {
+class TextInputField extends Component {
   render() {
     return (
-      <div>
-        zdarova pacani
-      </div>
+      <input type="text" name="username" id="username" value="" placeholder="Your Username" />
     );
   }
 }
 
-export default Header;
+export default TextInputField;
