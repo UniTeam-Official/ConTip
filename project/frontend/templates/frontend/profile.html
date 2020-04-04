@@ -20,7 +20,7 @@
 					<header id="header">
 						<nav id="meny" class="meny">
 							<ul>
-								<li><a href="generic.html">Search</a></li>
+								<li><a href="search.html">Search</a></li>
 								<li><a href="index.html">Recommendations</a></li>
 								<li><a href="profile.html">Profile</a></li>
 								<li><a href="watched.html">Seen Movies</a></li>
@@ -47,29 +47,29 @@
 							<!-- Text -->
 								<section>
 									<h2>User Info</h2>
-									<p>Username: </p>
-									<p>Email: </p>
-									<p>Full name: </p>
-									<p>Last login: </p>
+									<p id="info-text">Username: </p>
+									<p id="info-text">Email: </p>
+									<p id="info-text"Full name: </p>
+									<p id="info-text">Last login: </p>
 									<h2>Change Profile</h2>
 									<h3>Change Favorite Genres</h3>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-small">
-												<input type="checkbox" id="genre1" name="genre1">
+												<input id="checkbox" type="checkbox" id="genre1" name="genre1">
 													<label for="genre1">First Genre</label>
-												<input type="checkbox" id="genre2" name="genre2" checked>
+												<input id="checkbox" type="checkbox" id="genre2" name="genre2" checked>
 													<label for="genre2">Second Genre</label>
-												<input type="checkbox" id="genre3" name="genre3">
+												<input id="checkbox" type="checkbox" id="genre3" name="genre3">
 													<label for="genre3">Third Genre</label>
-												<input type="checkbox" id="genre4" name="genre4">
+												<input id="checkbox" type="checkbox" id="genre4" name="genre4">
 													<label for="genre4">Fourth Genre</label>
-												<input type="checkbox" id="genre5" name="genre5" checked>
+												<input id="checkbox" type="checkbox" id="genre5" name="genre5" checked>
 													<label for="genre5">Fifth Genre</label>
 											</div>
 											<div class="col-12">
 												<ul class="actions">
-													<li><input type="submit" value="Submit" class="primary" /></li>
+													<li id="sendButton"><input type="submit" value="Submit" class="primary" /></li>
 												</ul>
 											</div>
 										</div>
@@ -77,12 +77,12 @@
 									<h3>Change Email</h3>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall">
+											<div id="text-input-field" class="col-6 col-12-xsmall">
 												<input type="email" name="demo-email" id="demo-email" value="" placeholder="New Email" />
 											</div>
 											<div class="col-12">
 												<ul class="actions">
-													<li><input type="submit" value="Submit" class="primary" /></li>
+													<li id="sendButton"><input type="submit" value="Submit" class="primary" /></li>
 												</ul>
 											</div>
 										</div>
@@ -91,12 +91,12 @@
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall">
-												<input type="password" name="demo-password" id="demo-password" value="" placeholder="New Password" />
-												<input type="password" name="confirm-password" id="confirm-password" value="" placeholder="Confirm New Password" />
+												<input id="passwordInputField" type="password" name="demo-password" id="demo-password" value="" placeholder="New Password" />
+												<input id="passwordInputField" type="password" name="confirm-password" id="confirm-password" value="" placeholder="Confirm New Password" />
 											</div>
 											<div class="col-12">
 												<ul class="actions">
-													<li><input type="submit" value="Submit" class="primary" /></li>
+													<li id="sendButton"><input type="submit" value="Submit" class="primary" /></li>
 												</ul>
 											</div>
 										</div>
@@ -104,7 +104,7 @@
 									<div class="row">
 										<div class="col-6 col-12-medium">
 											<ul class="actions stacked">
-												<li><a href="#" class="button small fit">Delete Account</a></li>
+												<li id="actionButton"><a href="#" class="button small fit">Delete Account</a></li>
 											</ul>
 										</div>
 									</div>
