@@ -5,9 +5,7 @@ import { render } from "react-dom";
 class SendButton extends Component {
   render() {
     return (
-      <div>
-        zdarova pacani
-      </div>
+      <input type="submit" value="Submit" class="primary" />
     );
   }
 }
