@@ -5,9 +5,9 @@ import { render } from "react-dom";
 class MobileNavBarIcon extends Component {
   render() {
     return (
-      <div>
-        zdarova pacani
-      </div>
+        <a href="javascript:void(0);" class="icon" onclick="navBarFunc()">
+            <i class="nav-button fa fa-bars"></i>
+        </a>
     );
   }
 }
