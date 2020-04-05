@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 
-class Header extends Component {
+class MobileNavBarIcon extends Component {
   render() {
     return (
       <div>
@@ -12,4 +12,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default MobileNavBarIcon;

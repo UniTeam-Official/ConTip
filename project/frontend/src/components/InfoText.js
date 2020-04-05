@@ -6,7 +6,10 @@ class InfoText extends Component {
   render() {
     return (
       <div>
-        zdarova pacani
+      <p>Username: </p>
+      <p>Email: </p>
+      <p>Full name: </p>
+      <p>Last login: </p>
       </div>
     );
   }
