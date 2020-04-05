@@ -19,21 +19,23 @@
 				<!-- Header -->
 					<header id="header">
 						<nav id="meny" class="meny">
-							<ul>
-								<li><a href="search.html">Search</a></li>
-								<li><a href="index.html">Recommendations</a></li>
-								<li><a href="profile.html">Profile</a></li>
-								<li><a href="watched.html">Seen Movies</a></li>
-								<li><a href="login.html">Log Out</a></li>
+							<ul id="desktop_menu">
+								<li id="desktop_navbarbutton"><a href="search.html">Search</a></li>
+								<li id="desktop_navbarbutton"><a href="index.html">Recommendations</a></li>
+								<li id="desktop_navbarbutton"><a href="profile.html">Profile</a></li>
+								<li id="desktop_navbarbutton"><a href="watched.html">Seen Movies</a></li>
+								<li id="desktop_navbarbutton"><a href="login.html">Log Out</a></li>
 							</ul>
 						</nav>
-						<a href="javascript:void(0);" class="icon" onclick="navBarFunc()">
-							<i class="nav-button fa fa-bars"></i>
-						</a>
+						<div id="NavBarIcon">
+                            <a href="javascript:void(0);" class="icon" onclick="navBarFunc()">
+                                <i class="nav-button fa fa-bars"></i>
+                            </a>
+                        </div>
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
+								<a href="index.html" id="titleicon" class="logo">
 									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">ConTip</span>
 								</a>
 						</div>
