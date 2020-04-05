@@ -5,7 +5,8 @@ class Checkbox extends Component {
   render() {
     return (
       <div>
-        zdarova pacani
+      <input id="checkbox" type="checkbox" name="genre1">
+          <label for="genre1">First Genre</label>
       </div>
     );
   }
