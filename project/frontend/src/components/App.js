@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Header from "./Header";
+import Header from "./Header"; 
 import Main from "./Main";
 import Footer from "./Footer";
+import LoginPage from "./LoginPage";
+import "../../templates/frontend/assets/css/main.css";
 
 class App extends Component {
 //  constructor(props) {
@@ -36,9 +38,11 @@ class App extends Component {
 
   render() {
     return (
-      <Header />
-      <Main />
-      <Footer />
+	<div>
+	    <Header />
+	    <Main />
+	    <Footer />
+	</div>
     );
   }
 }

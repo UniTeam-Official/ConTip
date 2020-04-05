@@ -2,14 +2,12 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 
-class Header extends Component {
+class PasswordInputField extends Component {
   render() {
     return (
-      <div>
-        zdarova pacani
-      </div>
+	<input type="password" name="user-password" id="password" value="" placeholder="Your Password" />
     );
   }
 }
 
-export default Header;
+export default PasswordInputField;

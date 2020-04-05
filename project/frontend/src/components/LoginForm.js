@@ -5,8 +5,10 @@ import TextInputField from "./TextInputField";
 class LoginForm extends Component {
   render() {
     return (
-        <TextInputField />
-        <PasswordInputField />
+	<div>
+	    <TextInputField />
+	    <PasswordInputField />
+	</div>
     );
   }
 }
