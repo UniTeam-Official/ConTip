@@ -1,9 +1,12 @@
-from rest_framework import generics, mixins
+from rest_framework import generics, mixins, filters
 from .serializers import *
 from .permissions import *
 from .pagination import *
+from .filters import *
 from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
+import django_filters
+from django_filters.rest_framework import DjangoFilterBackend
 
 
 class UserPreferencesView(generics.RetrieveAPIView,
@@ -71,8 +74,26 @@ class MovieListView(generics.ListAPIView):
     permission_classes = (IsAuthenticated, )
     pagination_class = StandardResultsSetPagination
 
+    filter_backends = [
+        filters.SearchFilter,
+        filters.OrderingFilter,
+        DjangoFilterBackend
+    ]
+
+    search_fields = ['title']
+    ordering_fields = ['title']
+
     def get_queryset(self):
-        return Movie.objects.all()
+        queryset = Movie.objects.all()
+        genres_params = self.request.query_params.get('genre', [])
+
+        # If genres filtering needed
+        if genres_params:
+            target_genres = eval(genres_params)
+
+            for target_genre in target_genres:
+                queryset = queryset.filter(genre__in=[target_genre])
+        return queryset
 
 
 class RatingCreateView(generics.CreateAPIView):
