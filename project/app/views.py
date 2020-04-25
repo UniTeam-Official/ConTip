@@ -69,6 +69,14 @@ class MovieDetailView(generics.RetrieveUpdateDestroyAPIView):
         return Movie.objects.all()
 
 
+class MovieRetrieveView(generics.RetrieveAPIView):
+    serializer_class = MovieSerializer
+    permission_classes = (IsAuthenticated, )
+
+    def get_queryset(self):
+        return Movie.objects.all()
+
+
 class MovieListView(generics.ListAPIView):
     serializer_class = MovieSerializer
     permission_classes = (IsAuthenticated, )

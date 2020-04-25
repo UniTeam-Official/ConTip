@@ -30,7 +30,7 @@ urlpatterns = [
     ),
     path(
         'film/detail/<int:pk>',
-        MovieDetailView.as_view()
+        MovieRetrieveView.as_view()
     ),
     path(
         'film/list/',
