@@ -113,14 +113,11 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Yyr3LL$db',
-        'USER': 'Yyr3LL',
-        'PASSWORD': 'uniteam322',
-        'HOST': 'Yyr3LL.mysql.pythonanywhere-services.com',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 AUTH_USER_MODEL = 'app.User'
 
