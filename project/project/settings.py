@@ -21,7 +21,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'app.apps.AppConfig',
-    #'frontend',
     'djoser',
     'django_filters',
 ]
@@ -142,6 +141,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 try:
-    from .local_settings import *
+    from .local_settings import *  # noqa
 except ImportError:
     pass
