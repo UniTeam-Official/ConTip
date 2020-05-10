@@ -7,14 +7,16 @@ RATING_NUMBER = 2000
 # Number of movies to recommend
 RECOMMEND_NUMBER = 6
 
+
 def euclidean_distance(row1, row2):
     distance = 0.0
     for i in row1:
         if i in row2:
-            distance += (row1[i] - row2[i])**2
+            distance += (row1[i] - row2[i]) ** 2
     return sqrt(distance)
 
-def get_neighbors(train_rows, test_row, num_neighbors = 5):
+
+def get_neighbors(train_rows, test_row, num_neighbors=5):
     print(len(train_rows.keys()))
     distances = list()
     for row in train_rows:
