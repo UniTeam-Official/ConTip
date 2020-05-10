@@ -18,6 +18,7 @@ Django = "==3.0.3"
 django-filters = "*"
 django-filter = "*"
 django-cors-headers = "*"
+djangorestframework-simplejwt = "*"
 
 [requires]
 python_version = "3.8"
