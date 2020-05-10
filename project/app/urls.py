@@ -64,6 +64,6 @@ urlpatterns = [
     ),
     path(
         'rating/list/',
-        RatingCreateView.as_view()
+        RatingListView.as_view()
     ),
 ]
