@@ -1,3 +1,4 @@
+# flake8: noqa: E405
 from rest_framework import generics, mixins, filters
 from .serializers import *
 from .permissions import *
@@ -105,6 +106,7 @@ class MovieListView(generics.ListAPIView):
                 queryset = queryset.filter(genre__in=[target_genre])
         return queryset
 
+
 class MovieRecommendView(generics.ListAPIView):
     serializer_class = MovieSerializer
     permission_classes = (IsAuthenticated, )
@@ -144,8 +146,6 @@ class MovieRecommendView(generics.ListAPIView):
         return recommendations
 
 
-
-
 class RatingCreateView(generics.CreateAPIView):
     serializer_class = RatingSerializer
     permission_classes = (IsAuthenticated, )
@@ -162,6 +162,7 @@ class RatingDetailView(generics.RetrieveUpdateDestroyAPIView):
 class RatingListView(generics.ListAPIView):
     serializer_class = RatingSerializer
     permission_classes = (IsAuthenticated, )
+    pagination_class = StandardResultsSetPagination
 
     def get_queryset(self):
         return Rating.objects.all()
