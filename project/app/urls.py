@@ -1,7 +1,11 @@
-from django.urls import path, include
+# flake8: noqa: E405
+from django.urls import path
 from .views import *
 
 urlpatterns = [
+
+    # USER PROFILE VIEWS
+
     path(
         'preferences/set/',
         UserPreferencesView.as_view()
@@ -10,38 +14,46 @@ urlpatterns = [
         'watched/set/',
         WatchedListView.as_view()
     ),
+
+    # GENRE VIEWS
+
     path(
         'genre/create/',
         GenreCreateView.as_view()
     ),
     path(
-        'genre/detail/<int:pk>',
+        'genre/detail/<int:pk>/',
         GenreDetailView.as_view()
     ),
     path(
         'genre/list/',
         GenreListView.as_view()
     ),
-    # PREFERENCES VIEWS
-    #FILM VIEWS
+
+    # FILM VIEWS
+
     path(
         'film/create/',
         MovieCreateView.as_view()
     ),
     path(
-        'film/detail/<int:pk>',
+        'film/detail/<int:pk>/',
         MovieRetrieveView.as_view()
     ),
     path(
         'film/list/',
         MovieListView.as_view()
     ),
-    #FILM RECOMMENDATIONS
+
+    # FILM RECOMMENDATIONS
+
     path(
         'film/recommend/',
         MovieRecommendView.as_view()
     ),
+
     # RATINGS VIEWS
+
     path(
         'rating/create/',
         RatingCreateView.as_view()
