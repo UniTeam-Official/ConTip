@@ -36,6 +36,11 @@ urlpatterns = [
         'film/list/',
         MovieListView.as_view()
     ),
+    #FILM RECOMMENDATIONS
+    path(
+        'film/recommend/',
+        MovieRecommendView.as_view()
+    ),
     # RATINGS VIEWS
     path(
         'rating/create/',
