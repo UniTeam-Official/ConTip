@@ -1,11 +1,14 @@
 from math import sqrt
+from random import randint
 
 # Number of neighbor users to look for
-NEIGHBOR_NUMBER = 5
+NEIGHBOR_NUMBER = 2
 # Number of ratings to consider
-RATING_NUMBER = 1000
+RATING_NUMBER = 2000
 # Number of movies to recommend
 RECOMMEND_NUMBER = 6
+# Chance to delete movie if 1 genre doesn't match
+WRONG_GENRE_DELETE_CHANCE = 20
 
 
 def euclidean_distance(row1, row2):
@@ -26,3 +29,6 @@ def get_neighbors(train_rows, test_row, num_neighbors=5):
     for i in range(num_neighbors):
         neighbors.append(distances[i][0])
     return neighbors
+
+def randchance(chance):
+    return (randint(0, 100) < chance)
