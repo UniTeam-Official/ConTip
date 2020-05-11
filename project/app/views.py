@@ -9,7 +9,8 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 import django_filters
 from django_filters.rest_framework import DjangoFilterBackend
 
-from .algorithms import euclidean_distance, get_neighbors, NEIGHBOR_NUMBER, RATING_NUMBER, RECOMMEND_NUMBER
+from .algorithms import euclidean_distance, get_neighbors, randchance, \
+    NEIGHBOR_NUMBER, RATING_NUMBER, RECOMMEND_NUMBER, WRONG_GENRE_DELETE_CHANCE
 
 
 class UserPreferencesView(generics.RetrieveAPIView,
@@ -131,18 +132,30 @@ class MovieRecommendView(generics.ListAPIView):
         # Get user ids of current user's nearest neighbors
         neighbors = get_neighbors(other_ratings_dict, my_ratings_dict)
 
-        # Get current user's watched_list
+        # Get current user's watched_list and genre_preference
         watched = get_object_or_404(UserProfile, user=self.request.user.id).watched_list
+        genre_prefs = get_object_or_404(UserProfile, user=self.request.user.id).genre_preference
 
         # Get top rated film ids from nearest neighbors
         recommendations, i = [], 0
         while len(recommendations) < RECOMMEND_NUMBER:
+            # Get ratings of the ith user
             user_i_ratings = other_ratings_dict[neighbors[i]]
+            # Get the max rated film of the ith user
             max_rated_film = max(user_i_ratings, key=user_i_ratings.get)
+            # Add the recommendation (for now)
             recommendations.append(max_rated_film)
+            # Delete from ith user's films list
             del (other_ratings_dict[neighbors[i]][max_rated_film])
+            # If already watched, delete
             if (recommendations[-1] in watched.all()):
                 del (recommendations[-1])
+            else:
+                # If 1 genre not preferred, 20% chance of deleting
+                for g in recommendations[-1].genre.all():
+                    if (g not in genre_prefs.all()) and randchance(20):
+                        del (recommendations[-1])
+                        break
             i += 1
             if i >= NEIGHBOR_NUMBER:
                 i = 0
