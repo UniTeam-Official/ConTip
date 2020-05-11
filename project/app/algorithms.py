@@ -17,7 +17,6 @@ def euclidean_distance(row1, row2):
 
 
 def get_neighbors(train_rows, test_row, num_neighbors=5):
-    print(len(train_rows.keys()))
     distances = list()
     for row in train_rows:
         dist = euclidean_distance(test_row, train_rows[row])
