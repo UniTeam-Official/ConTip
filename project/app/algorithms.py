@@ -3,7 +3,7 @@ from math import sqrt
 # Number of neighbor users to look for
 NEIGHBOR_NUMBER = 5
 # Number of ratings to consider
-RATING_NUMBER = 2000
+RATING_NUMBER = 1000
 # Number of movies to recommend
 RECOMMEND_NUMBER = 6
 

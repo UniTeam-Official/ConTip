@@ -117,7 +117,7 @@ class MovieRecommendView(generics.ListAPIView):
         #     other_ratings_dict - dictionary with other users' dictionaries (key = user, value = dicionary)
         #         every dictionary in other_ratings_dict is (key = film, value = rating)
         my_ratings = Rating.objects.filter(user=self.request.user)
-        other_ratings = Rating.objects.exclude(user=self.request.user)[:RATING_NUMBER]
+        other_ratings = Rating.objects.exclude(user=self.request.user)[1000:1000+RATING_NUMBER]
         my_ratings_dict = {}
         other_ratings_dict = {}
         for r in my_ratings:
@@ -131,6 +131,9 @@ class MovieRecommendView(generics.ListAPIView):
         # Get user ids of current user's nearest neighbors
         neighbors = get_neighbors(other_ratings_dict, my_ratings_dict)
 
+        # Get current user's watched_list
+        watched = get_object_or_404(UserProfile, user=self.request.user.id).watched_list
+
         # Get top rated film ids from nearest neighbors
         recommendations, i = [], 0
         while len(recommendations) < RECOMMEND_NUMBER:
@@ -138,6 +141,8 @@ class MovieRecommendView(generics.ListAPIView):
             max_rated_film = max(user_i_ratings, key=user_i_ratings.get)
             recommendations.append(max_rated_film)
             del (other_ratings_dict[neighbors[i]][max_rated_film])
+            if (recommendations[-1] in watched.all()):
+                del (recommendations[-1])
             i += 1
             if i >= NEIGHBOR_NUMBER:
                 i = 0
