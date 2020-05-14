@@ -63,6 +63,10 @@ urlpatterns = [
         RatingDetailView.as_view()
     ),
     path(
+        'rating/get_id/',
+        RatingIdRetrieveView.as_view()
+    ),
+    path(
         'rating/list/',
         RatingListView.as_view()
     ),

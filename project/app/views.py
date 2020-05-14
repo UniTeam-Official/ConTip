@@ -8,6 +8,7 @@ from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 import django_filters
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.response import Response
 
 from .algorithms import euclidean_distance, get_neighbors, randchance, \
     NEIGHBOR_NUMBER, RATING_NUMBER, RECOMMEND_NUMBER, WRONG_GENRE_DELETE_CHANCE
@@ -175,6 +176,16 @@ class RatingDetailView(generics.RetrieveUpdateDestroyAPIView):
 
     def get_queryset(self):
         return Rating.objects.filter(user=self.request.user)
+
+
+class RatingIdRetrieveView(generics.RetrieveAPIView):
+    serializer_class = RatingDetailView
+    permission_classes = (IsAuthenticated, )
+
+    def get_queryset(self):
+        user = self.request.user
+        film = self.request.data["id"]
+        return get_object_or_404(Rating, user=user, film=film)
 
 
 class RatingListView(generics.ListAPIView):
