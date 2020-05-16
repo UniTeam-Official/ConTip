@@ -119,7 +119,7 @@ class MovieRecommendView(generics.ListAPIView):
         #     other_ratings_dict - dictionary with other users' dictionaries (key = user, value = dicionary)
         #         every dictionary in other_ratings_dict is (key = film, value = rating)
         my_ratings = Rating.objects.filter(user=self.request.user)
-        other_ratings = Rating.objects.exclude(user=self.request.user)[1000:1000+RATING_NUMBER]
+        other_ratings = Rating.objects.exclude(user=self.request.user)[1000:1000 + RATING_NUMBER]
         my_ratings_dict = {}
         other_ratings_dict = {}
         for r in my_ratings:
@@ -172,7 +172,6 @@ class RatingCreateView(generics.CreateAPIView):
 
 class RatingDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = RatingSerializer
-    permission_classes = (IsOwnerOrReadOnly, IsAdminUser)
 
     def get_queryset(self):
         return Rating.objects.filter(user=self.request.user)
@@ -180,12 +179,13 @@ class RatingDetailView(generics.RetrieveUpdateDestroyAPIView):
 
 class RatingIdRetrieveView(generics.RetrieveAPIView):
     serializer_class = RatingDetailView
-    permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated,)
 
-    def get_queryset(self):
-        user = self.request.user
-        film = self.request.data["id"]
-        return get_object_or_404(Rating, user=user, film=film)
+    def get(self, *args, **kwargs):
+        user_id = self.request.user.id
+        film_id = self.kwargs["film_id"]
+        obj = get_object_or_404(Rating, user=user_id, film=film_id)
+        return Response(obj.id)
 
 
 class RatingListView(generics.ListAPIView):

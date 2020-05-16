@@ -63,7 +63,7 @@ urlpatterns = [
         RatingDetailView.as_view()
     ),
     path(
-        'rating/get_id/',
+        'rating/get_id/<int:film_id>/',
         RatingIdRetrieveView.as_view()
     ),
     path(
